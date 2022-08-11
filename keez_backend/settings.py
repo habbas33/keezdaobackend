@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['keezdaobackend.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['keezdaobackend.herokuapp.com','127.0.0.1','*']
 
 
 # Application definition
@@ -135,9 +135,9 @@ STATICFILES_DIRS = (
 )
 
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = (
-    'https://keezdaobackend.herokuapp.com',
-)
+# CORS_ALLOWED_ORIGINS = (
+#     'https://keezdaobackend.herokuapp.com',
+# )
 
 CSRF_TRUSTED_ORIGINS = [
     'keezdaobackend.herokuapp.com',
