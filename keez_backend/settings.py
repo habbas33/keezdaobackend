@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-xm)gg5a=j&($koy#0-ob1y3tae)s7laypd%_0bv3awg6+)e44_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://keezdaobackend.herokuapp.com/"]
+ALLOWED_HOSTS = ['keezdaobackend.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'keez_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -127,8 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # STATIC_URL = 'static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT  =   os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
