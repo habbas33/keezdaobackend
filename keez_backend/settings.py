@@ -133,6 +133,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = (
+    'https://keezdaobackend.herokuapp.com',
+)
+
+CSRF_TRUSTED_ORIGINS = [
+    'keezdaobackend.herokuapp.com',
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
