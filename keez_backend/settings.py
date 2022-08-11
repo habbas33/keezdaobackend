@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-xm)gg5a=j&($koy#0-ob1y3tae)s7laypd%_0bv3awg6+)e44_
 # print("for secre",SECRET_KEY)
 # print(os.environ)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['keezdaobackend.herokuapp.com','127.0.0.1']
 
