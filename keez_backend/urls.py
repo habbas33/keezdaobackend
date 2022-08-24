@@ -22,4 +22,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/daos/', include('base.urls.daos_urls')),
     path('api/v1/proposals/', include('base.urls.proposals_urls')),
+    path('api/v1/votes/', include('base.urls.vote_urls')),
 ]
