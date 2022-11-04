@@ -9,3 +9,4 @@ from .models.vote_models import *
 admin.site.register(Daos)
 admin.site.register(Proposal)
 admin.site.register(Vote)
+
