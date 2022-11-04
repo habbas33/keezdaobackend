@@ -6,6 +6,7 @@ class Daos(models.Model):
     daoName = models.CharField(max_length=50)
     profileImage = JSONField(null = True)
     categories = JSONField(null = True)
+    daoLink = JSONField(null = True)
     description = models.TextField( null = False)
     keyPermissions = JSONField(null = True)
     vaultDetails = JSONField(null = True)

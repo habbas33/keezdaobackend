@@ -89,6 +89,7 @@ def setdaos(request):
         profileImage = request.data['daoProfile'].get('profileImage'),
         categories = request.data['daoProfile'].get('categories'),
         description = request.data['daoProfile'].get('description'),
+        daoLink = request.data['daoProfile'].get('daoLink'),
         keyPermissions = request.data.get('keyPermissions'),
         vaultDetails = request.data.get('vaultDetails'),
         votingParameters = request.data.get('votingParameters'),
@@ -100,3 +101,10 @@ def setdaos(request):
     )
     serializer = DaosSerializer(dao, many = False)
     return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+@api_view(['PUT'])
+def updatedao(request):
+    Daos.objects.filter(CID=request.data.get('CID')).update(keyPermissions=request.data.get('keyPermissions'))
+    dao= Daos.objects.filter(CID=request.data.get('CID'))
+    serializer = DaosSerializer(dao, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
