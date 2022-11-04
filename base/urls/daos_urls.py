@@ -11,5 +11,6 @@ urlpatterns = [
     path('category', views.getdaosbycategory, name = 'dao-by-category'),
     path('member', views.getdaosbymember, name = 'dao-by-member'),
     path('set', views.setdaos, name = 'setdaos'),
+    path('update', views.updatedao, name = 'updatedao'),
 ]
 
